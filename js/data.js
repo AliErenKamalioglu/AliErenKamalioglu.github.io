@@ -113,7 +113,7 @@ const data = {
             tech: ["Python", "TensorFlow", "CNN", "Medical"],
             desc_tr: "Sağlık sektörü için geliştirilen, 10.000+ görüntü ile eğitilmiş erken teşhis asistanı. %94.5 doğruluk oranı ile doktorlara karar desteği sunar.",
             desc_en: "Early diagnosis assistant for healthcare, trained with 10k+ images. Provides decision support to doctors with 94.5% accuracy.",
-            github: "https://github.com/ErenRR001"
+            github: "https://github.com/AliErenKamalioglu"
         },
         {
             id: "artgallery",
@@ -123,7 +123,7 @@ const data = {
             tech: [".NET Core", "N-Tier", "MSSQL", "Clean Arch"],
             desc_tr: "Kurumsal ölçeklenebilirlik için N-Katmanlı mimari ile geliştirilmiş içerik yönetim sistemi. SOLID prensipleri ve güvenli API yapısı.",
             desc_en: "Content management system developed with N-Tier architecture for enterprise scalability. SOLID principles and secure API structure.",
-            github: "https://github.com/ErenRR001"
+            github: "https://github.com/AliErenKamalioglu"
         },
         {
             id: "crypto",
@@ -133,7 +133,7 @@ const data = {
             tech: ["JavaScript", "Chart.js", "API Integration"],
             desc_tr: "Binance API entegrasyonu ile canlı veri akışı sağlayan, kullanıcı dostu finansal takip arayüzü. Dinamik grafikler ve anlık uyarılar.",
             desc_en: "User-friendly financial tracking interface providing live data stream with Binance API integration. Dynamic charts and instant alerts.",
-            github: "https://github.com/ErenRR001"
+            github: "https://github.com/AliErenKamalioglu"
         },
         {
             id: "lms",
@@ -143,7 +143,7 @@ const data = {
             tech: ["C#", "WinForms", "Entity Framework"],
             desc_tr: "Veritabanı yönetimi ve kullanıcı arayüzünü birleştiren masaüstü otomasyonu. Envanter takibi ve raporlama modülleri.",
             desc_en: "Desktop automation combining database management and UI. Inventory tracking and reporting modules.",
-            github: "https://github.com/ErenRR001"
+            github: "https://github.com/AliErenKamalioglu"
         },
         {
             id: "spotify",
@@ -153,7 +153,7 @@ const data = {
             tech: ["Python", "Pandas", "Scikit-Learn"],
             desc_tr: "Spotify verileri üzerinden şarkı popülaritesini tahmin eden veri madenciliği projesi. Büyük veri işleme teknikleri.",
             desc_en: "Data mining project predicting song popularity using Spotify data. Big data processing techniques.",
-            github: "https://github.com/ErenRR001"
+            github: "https://github.com/AliErenKamalioglu"
         }
     ],
 
@@ -176,4 +176,5 @@ const data = {
             tags: ["AI", "Research"]
         }
     ]
+
 };

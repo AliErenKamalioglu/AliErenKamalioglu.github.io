@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Sayfa Bulunamadı</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .error-container {
+            height: 70vh; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; text-align: center;
+        }
+        .error-code { font-size: 8rem; font-weight: 800; line-height: 1; color: var(--accent); }
+        .error-msg { font-family: var(--font-code); margin: 20px 0 40px 0; color: var(--text-muted); font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link"><div class="logo">AEK<span>.DEV</span></div></a>
+        <div class="nav-links"><a href="index.html" class="nav-item">Ana Sayfa</a></div>
+    </nav>
+
+    <div class="page-container error-container">
+        <div class="error-code">404</div>
+        <div class="error-msg">
+            > Hata: Aradığınız sayfa DOM ağacından ayrılmış olabilir.<br>
+            > Lütfen rotanızı yeniden hesaplayın.
+        </div>
+        <a href="index.html" class="btn">Ana Sayfaya Dön</a>
+    </div>
+
+    <footer><p>Ali Eren KAMALIOĞLU © 2026 | Tüm Hakları Saklıdır.</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

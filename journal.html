@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ali Eren KAMALIOĞLU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="journal-page">
+    <nav>
+        <a href="index.html" class="logo-link"><div class="logo">AEK<span>.DEV</span></div></a>
+        <div class="nav-links">
+            <a href="about.html" class="nav-item" data-lang="nav.about">Hakkımda</a>
+            <a href="projects.html" class="nav-item" data-lang="nav.projects">Projeler</a>
+            <a href="journal.html" class="nav-item active" data-lang="nav.journal">Blog</a>
+            <a href="contact.html" class="nav-item" data-lang="nav.contact">İletişim</a>
+            <button id="lang-btn" class="lang-btn" data-lang="btn_lang">EN | English</button>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 3rem; margin-bottom: 10px;" data-lang="journal.heading">Teknik Blog</h1>
+            <p style="color: var(--text-muted); font-size: 1.1rem;" data-lang="journal.sub">Sektörel içgörüler ve mimari notlarım.</p>
+        </div>
+        <div class="grid-container" id="journal-grid"></div>
+    </div>
+
+    <footer><p data-lang="footer"></p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

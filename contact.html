@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Ali Eren KAMALIOĞLU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .label { font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; display: block; letter-spacing: 0.5px; }
+        .val a:hover { color: var(--accent); text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link"><div class="logo">AEK<span>.DEV</span></div></a>
+        <div class="nav-links">
+            <a href="about.html" class="nav-item" data-lang="nav.about">Hakkımda</a>
+            <a href="projects.html" class="nav-item" data-lang="nav.projects">Projeler</a>
+            <a href="journal.html" class="nav-item" data-lang="nav.journal">Blog</a>
+            <a href="contact.html" class="nav-item active" data-lang="nav.contact">İletişim</a>
+            <button id="lang-btn" class="lang-btn" data-lang="btn_lang">EN | English</button>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 3rem; margin-bottom: 10px;" data-lang="contact.heading">İş Birliği & İletişim</h1>
+            <p style="color: var(--text-muted); font-size: 1.1rem;" data-lang="contact.sub">Staj, proje veya tanışmak için iletişime geçebilirsiniz.</p>
+        </div>
+
+        <div class="contact-layout">
+            <div class="info-card">
+                <div class="info-row" style="margin-bottom: 30px;">
+                    <div class="label" data-lang="contact.info_email">E-POSTA</div>
+                    <div class="val" style="font-size: 1.1rem; font-weight: 500;">
+                        <a href="mailto:kamalioglueren@gmail.com">kamalioglueren@gmail.com</a>
+                    </div>
+                </div>
+                <div class="info-row" style="margin-bottom: 30px;">
+                    <div class="label" data-lang="contact.info_loc">KONUM</div>
+                    <div class="val" style="font-size: 1.1rem; font-weight: 500;">İstanbul, Türkiye</div>
+                </div>
+                <div class="info-row">
+                    <div class="label" data-lang="contact.info_social">PROFESYONEL AĞLAR</div>
+                    <div class="val" style="display: flex; gap: 15px; font-size: 1.5rem;">
+                        <a href="https://github.com/ErenRR001" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/alierenkamalioglu001" target="_blank" style="color:#0077b5"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <form id="contactForm">
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <div class="label" data-lang="contact.label_name">AD SOYAD</div>
+                        <input type="text" class="form-input" id="name" data-lang-ph="contact.ph_name" placeholder="Adınız Soyadınız" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <div class="label" data-lang="contact.label_email">E-POSTA ADRESİ</div>
+                        <input type="email" class="form-input" id="email" data-lang-ph="contact.ph_email" placeholder="ik@sirket.com" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <div class="label" data-lang="contact.label_msg">MESAJINIZ</div>
+                        <textarea class="form-input" id="message" rows="5" data-lang-ph="contact.ph_msg" placeholder="Mesajınız..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;" data-lang="contact.btn_send">Mesajı Gönder</button>
+                    <div id="statusMsg" style="margin-top:15px; font-family:var(--font-code); color:var(--accent); font-size: 0.9rem;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer><p data-lang="footer"></p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const status = document.getElementById('statusMsg');
+            const originalText = btn.innerText;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Gönderiliyor...';
+            btn.disabled = true;
+            setTimeout(() => {
+                const name = document.getElementById('name').value;
+                const body = document.getElementById('message').value;
+                window.location.href = `mailto:kamalioglueren@gmail.com?subject=Portfolyo İletişim: ${name}&body=${body}`;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Yönlendirildi';
+                status.innerText = '> E-posta istemciniz açılıyor...';
+                setTimeout(() => { btn.innerText = originalText; btn.disabled = false; }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

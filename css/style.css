@@ -216,4 +216,90 @@ footer {
     .about-grid, .contact-layout { grid-template-columns: 1fr; }
     .nav-links a.nav-item { display: none; } 
     .photo-container { margin-bottom: 20px; }
+
+}
+/* --- RESPONSIVE / MOBİL UYUMLULUK AYARLARI --- */
+
+@media (max-width: 900px) {
+    /* 1. Menüyü Mobilde Düzenle */
+    nav {
+        flex-direction: column; /* Alt alta diz */
+        padding: 15px;
+        position: relative; /* Mobilde yapışkan olmasın, içeriği kapatmasın */
+        height: auto;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex; /* Gizlemeyi kaldır */
+        flex-wrap: wrap; /* Sığmazsa alt satıra geçsin */
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links a.nav-item {
+        display: block; /* Linkleri görünür yap */
+        font-size: 0.85rem;
+        padding: 5px 10px;
+        background: rgba(0,0,0,0.05); /* Hafif kutucuk içine al */
+        border-radius: 4px;
+    }
+
+    /* Dil butonu mobilde çok yer kaplamasın */
+    #lang-btn { margin-top: 10px; width: 100%; text-align: center; }
+
+    /* 2. Hero (Giriş) Kısmını Düzelt */
+    .hero-wrapper {
+        min-height: auto; /* Zorunlu yüksekliği kaldır */
+        padding-top: 40px;
+        padding-bottom: 60px;
+        height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* İsmi küçült (PC'de 4rem idi) */
+        line-height: 1.2;
+    }
+
+    .hero-greeting {
+        font-size: 0.9rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+        padding: 0 10px; /* Kenarlardan boşluk ver */
+    }
+
+    /* 3. Genel Sayfa Düzeni */
+    .page-container {
+        padding: 30px 15px; /* Mobilde kenar boşluklarını azalt */
+    }
+
+    .about-grid, .contact-layout {
+        grid-template-columns: 1fr; /* Yan yana olanları alt alta al */
+        gap: 40px;
+    }
+
+    .photo-container {
+        width: 100%; /* Resmi ekrana yay */
+        max-width: 300px; /* Ama çok da büyümesin */
+        margin: 0 auto;
+    }
+
+    .stats-row {
+        flex-wrap: wrap; /* İstatistikler sığmazsa alt alta geçsin */
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .stat-item {
+        text-align: center;
+        min-width: 100px;
+    }
+    
+    /* Tech Stack Şeridi Mobilde Daha Hızlı Aksın */
+    .tech-item {
+        font-size: 0.85rem;
+    }
 }

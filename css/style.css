@@ -2,13 +2,13 @@
 :root {
     /* BEJ / WARM MINIMALIST PALET */
     --bg-color: #FDFBF7; 
-    --surface: #FFFFFF;  
-    --border: #E5E5E0;   
+    --surface: #FFFFFF;
+    --border: #E5E5E0;
     
-    --accent: #D35400;   /* Kiremit / Terra Cotta (Vurgu Rengi) */
+    --accent: #D35400;   /* Kiremit / Terra Cotta */
     --accent-hover: #E67E22;
     
-    --text-main: #2C3E50; /* Koyu Antrasit */
+    --text-main: #2C3E50; /* Koyu Antrasit - Okunabilirlik için */
     --text-muted: #7F8C8D; 
     
     --font-head: 'Inter', sans-serif;
@@ -29,13 +29,14 @@ body {
     display: flex; flex-direction: column;
 
     /* YAZILIM ARKA PLANI & PERDELEME */
+    /* %94 oranında bej perde çekiyoruz ki yazılar net okunsun ama arkada kod havası olsun */
     background-image: 
         linear-gradient(to bottom, rgba(253, 251, 247, 0.94), rgba(253, 251, 247, 0.97)),
         url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
     
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Telefonda arka plan sabit kalsın */
+    background-attachment: fixed; /* Parallax Efekti: Sayfa kayarken resim sabit kalır */
     background-repeat: no-repeat;
 }
 
@@ -113,7 +114,7 @@ nav {
 }
 .btn-outline:hover { background: var(--text-main); color: #fff; border-color: var(--text-main); }
 
-/* Sosyal İkon Butonları */
+/* Sosyal İkon Butonları (About Sayfası) */
 .btn-icon {
     padding: 0 15px; height: 54px; 
     display: inline-flex; align-items: center; justify-content: center;
@@ -209,30 +210,30 @@ footer {
     background: rgba(253, 251, 247, 0.8);
 }
 
-/* --- RESPONSIVE / MOBİL UYUMLULUK (DÜZELTİLDİ) --- */
+/* --- RESPONSIVE / MOBİL UYUMLULUK DÜZELTMESİ --- */
 @media (max-width: 900px) {
     /* 1. Menüyü Mobilde Görünür Yap */
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Alt alta diz */
         padding: 15px;
-        position: relative; /* İçeriğin üstüne binmesin */
+        position: relative; 
         height: auto;
         gap: 15px;
     }
 
     .nav-links {
         display: flex !important; /* GİZLEME, GÖSTER! */
-        flex-wrap: wrap;
+        flex-wrap: wrap; 
         justify-content: center;
-        gap: 10px;
+        gap: 10px; 
         width: 100%;
     }
 
     .nav-links a.nav-item {
-        display: block;
-        font-size: 0.85rem;
+        display: block; 
+        font-size: 0.85rem; 
         padding: 8px 12px;
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(0, 0, 0, 0.05); /* Mobilde kutucuk içine al */
         border-radius: 6px;
         color: var(--text-main);
     }
@@ -246,9 +247,8 @@ footer {
         line-height: 1.2;
     }
     
-    /* 3. Sayfa Düzeni */
     .about-grid, .contact-layout { 
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Yan yana olanları alt alta al */
     }
     
     .stats-row {
